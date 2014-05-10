@@ -1,6 +1,7 @@
 class CalculationsController < ApplicationController
   def home
-    render 'home'
+    @the_number = params[:number].to_f
+    @answer = @the_number*@the_number
   end
 
   def sqrt
